@@ -9,6 +9,6 @@
   tasks: 
   - name: print variables
     vars: 
-      NAME: "Keerthi"
+      NAME: "Bingi"
     ansible.builtin.debug:
       msg: "I am {{ NAME }}, and i am learning {{ COURSE }} which is {{ Description }}"
