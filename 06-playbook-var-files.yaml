@@ -5,5 +5,7 @@
   - vars.yaml
   tasks:
   - name: Fetching vars from file
+    vars: 
+      NAME: "Bingi"
     ansible.builtin.debug:
       msg: "I am {{ NAME }}, and i am learning {{ COURSE }} which is {{ Description }}"
