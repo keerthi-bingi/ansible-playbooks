@@ -1,0 +1,14 @@
+- name: ansible vars
+  hosts: localhost
+  connection: local
+  vars: 
+    NAME: "Keerthi"
+    COURSE: "Ansible"
+    Description: "Configuration Management tool"
+
+  tasks: 
+  - name: print variables
+    vars: 
+      NAME: "Keerthi"
+    ansible.builtin.debug:
+      msg: "I am {{ NAME }}, and i am learning {{ COURSE }} which is {{ Description }}"
