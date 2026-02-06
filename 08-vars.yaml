@@ -1,0 +1,7 @@
+- name: vars from ini
+  hosts: localhost
+  connection: local
+  tasks: 
+  - name: print vars
+    ansible.builtin.debug:
+      msg: "Name is: {{ NAME }}"
