@@ -1,0 +1,5 @@
+- name: "ping the server"
+  hosts: install
+  tasks:
+  - name: "ping install server"
+    ansible.builtin.ping:
