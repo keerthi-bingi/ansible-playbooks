@@ -1,0 +1,11 @@
+- name: playbook-variables
+  hosts: local
+  connection: local
+  vars: 
+    NAME: "Keerthi"
+    COURSE: "Ansible"
+    Description: "Configuration Management tool"
+  tasks:
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "I am {{ NAME }}, and i am learning {{ COURSE }} which is {{ Description }}"
