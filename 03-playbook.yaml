@@ -1,14 +1,21 @@
-- name: install nginx
+---
+- name: Install Nginx web server
   hosts: install
-  become: yes
+  become: true  # Required for elevated privileges to install packages
   tasks:
-  - name: Installing nginx server
-    ansible.builtin.package:
-      name: nginx
-      state: installed
+    - name: Ensure Nginx is at the latest version
+      ansible.builtin.package:
+        name: nginx
+        state: latest
+      register: nginx_install_status
+      # Optional: Update package cache on Debian-based systems if needed
+      # when: ansible_os_family == "Debian"
+      # apt: update_cache: yes
 
-  - name: starting nginx server
-    ansible.builtin.package:
-      name: nginx
-      state: present
-      enabled: yes
+    - name: Start and enable Nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+      # Only runs if the package installation made changes
+      # when: nginx_install_status.changed 
