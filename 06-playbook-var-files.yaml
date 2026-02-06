@@ -1,0 +1,9 @@
+- name: vars from file
+  hots: localhost
+  connection: local
+  var_files: 
+  - vars.yaml
+  tasks:
+  - name: Fetching vars from file
+    ansible.builtin.debug:
+      msg: "I am {{ NAME }}, and i am learning {{ COURSE }} which is {{ Description }}"
