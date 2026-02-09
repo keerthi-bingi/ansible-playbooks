@@ -4,7 +4,7 @@
   vars:
     PROGRAM: "DevSecOps with AWS" # string
     DURATION: 140 # int/number
-    IS_LIVE: true # bool
+    IS_LIVE: false # bool
     DETAILS: # map/dictionary {}
       MONTHS: 4
       TRAINER: "Sivakumar Reddy"
