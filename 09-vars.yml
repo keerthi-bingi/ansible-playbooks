@@ -1,0 +1,7 @@
+- name: vars from Args
+  hosts: local
+  connection: local
+  tasks:
+  - name: Passing vars from Args
+    ansible.builtin.debug:
+    msg: "Hi, I am {{ NAME }}"
