@@ -1,0 +1,10 @@
+- name: conditions playbook
+  hosts: local
+  connection: local
+  vars: 
+    WORKSHOP: 7
+  tasks: 
+  - name: check no of days
+    ansible.builtin.debug:
+      msg: No of days of ansible workshop
+    when: WORKSHOP > 5
