@@ -4,4 +4,4 @@
   tasks:
   - name: Passing vars from Args
     ansible.builtin.debug:
-    msg: "Hi, I am {{ NAME }}"
+      msg: "Hi, I am {{ NAME }}"
