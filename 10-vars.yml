@@ -12,7 +12,7 @@
     private: false
   tasks:
   - name: print name from tasks
-    vars:
-      NAME: "Keerthi from tasks"
+    # vars:
+    #   NAME: "Keerthi from tasks"
     ansible.builtin.debug: 
       msg: "Hi, I am {{ NAME }}"
