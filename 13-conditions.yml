@@ -6,5 +6,5 @@
   tasks: 
   - name: check no of days
     ansible.builtin.debug:
-      msg: No of days of ansible workshop
+      msg: No of days of ansible workshop is more than 5
     when: WORKSHOP > 5
