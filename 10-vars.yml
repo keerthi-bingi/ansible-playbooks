@@ -4,8 +4,8 @@
   vars:
     NAME: "Keerthi from play"
     COURSE: "Ansible from play"
-  vars_files:
-  - vars.yaml
+  # vars_files:
+  # - vars.yaml
   vars_prompt:
   - name: NAME
     prompt: "Please enter the name"
