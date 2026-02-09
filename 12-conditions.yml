@@ -1,0 +1,10 @@
+- name: conditions playbook
+  hosts: local
+  connection: local
+  vars: 
+    IS_LIVE: true
+  tasks: 
+  - name: check live or not
+    ansible.builtin.debug:
+      msg: is live now
+    when: IS_LIVE
