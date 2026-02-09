@@ -6,10 +6,10 @@
     COURSE: "Ansible from play"
   # vars_files:
   # - vars.yaml
-  vars_prompt:
-  - name: NAME
-    prompt: "Please enter the name"
-    private: false
+  # vars_prompt:
+  # - name: NAME
+  #   prompt: "Please enter the name"
+  #   private: false
   tasks:
   - name: print name from tasks
     # vars:
