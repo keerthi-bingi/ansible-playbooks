@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: 
-    WORKSHOP: 7
+    WORKSHOP: 3
   tasks: 
   - name: check no of days
     ansible.builtin.debug:
