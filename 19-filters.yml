@@ -1,0 +1,9 @@
+- name: filters playbook
+  hosts: local
+  connection: local
+  tasks: 
+  - name: print greeting
+    # vars: 
+    # Name: "Good Evening"
+    ansible.builtin.debug:
+      msg: "Hi Keerthi, {{ GREETING }}"
