@@ -1,7 +1,13 @@
 - name: filters playbook
   hosts: local
   connection: local
+  vars: 
+    fruits: apple, banana, mango, grapes
   tasks: 
   - name: print greeting
     ansible.builtin.debug:
       msg: "Hi Keerthi, {{ GREETING | default('Good Morning') }}"
+
+  - name: Convert string to list
+    ansible.builtin.debug:
+      msg: "{{ fruits | split(',') }}"
