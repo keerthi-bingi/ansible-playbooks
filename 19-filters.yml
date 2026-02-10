@@ -3,6 +3,12 @@
   connection: local
   vars: 
     fruits: apple, banana, mango, grapes
+  
+  tags:
+    name: ansible
+    project: roboshop
+    component: catalogue
+
   tasks: 
   - name: print greeting
     ansible.builtin.debug:
@@ -11,3 +17,7 @@
   - name: Convert string to list
     ansible.builtin.debug:
       msg: "{{ fruits | split(',') }}"
+
+  - name: Convert dictionary to items
+    ansible.builtin.debug:
+      msg: "{{ tags | dict2items  }}"
