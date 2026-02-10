@@ -4,7 +4,7 @@
   vars: 
     fruits: apple, banana, mango, grapes
     course: "Ansible"
-    myIp: "257.400.500.600"
+    myIp: "172.31.67.105"
     tags:
       Name: ansible
       project: roboshop
