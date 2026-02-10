@@ -5,7 +5,7 @@
     fruits: apple, banana, mango, grapes
   
   tags:
-    name: ansible
+    Name: ansible
     project: roboshop
     component: catalogue
 
