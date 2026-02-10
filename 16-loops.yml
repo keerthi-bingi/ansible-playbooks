@@ -1,0 +1,11 @@
+- name: loops playbook
+  hosts: local
+  connection: local
+  tasks: 
+  - name: print names in loop
+    ansible.builtin.debug: 
+      msg: Hi, {{ item }} #itme is a reserved keyword in ansible
+    loop:
+    - Keerthi
+    - Bingi
+    - Sonu
