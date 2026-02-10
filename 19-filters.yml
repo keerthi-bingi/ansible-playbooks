@@ -3,7 +3,7 @@
   connection: local
   vars: 
     fruits: apple, banana, mango, grapes
-  
+    course: "Ansible"
     tags:
       Name: ansible
       project: roboshop
@@ -21,3 +21,11 @@
   - name: Convert dictionary to items
     ansible.builtin.debug:
       msg: "{{ tags | dict2items  }}"
+
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "{{ course | upper }}"
+
+  - name: convert to lower case
+    ansible.builtin.debug:
+      msg: "{{ course | lower }}"
