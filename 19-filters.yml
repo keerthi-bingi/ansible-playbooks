@@ -4,10 +4,10 @@
   vars: 
     fruits: apple, banana, mango, grapes
   
-  tags:
-    Name: ansible
-    project: roboshop
-    component: catalogue
+    tags:
+      Name: ansible
+      project: roboshop
+      component: catalogue
 
   tasks: 
   - name: print greeting
