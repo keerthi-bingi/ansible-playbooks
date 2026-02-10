@@ -4,6 +4,7 @@
   vars: 
     fruits: apple, banana, mango, grapes
     course: "Ansible"
+    myIp: "257.400.500.600"
     tags:
       Name: ansible
       project: roboshop
@@ -29,3 +30,7 @@
   - name: convert to lower case
     ansible.builtin.debug:
       msg: "{{ course | lower }}"
+
+  - name: check ipv4
+    ansible.builtin.debug:
+      msg: "{{ myIp | ansible.utils.ipv4 }}"
